@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="AdditionalModuleElements">
+    <content url="file://$MODULE_DIR$/target/Spring_MVC" />
+    <content url="file://$MODULE_DIR$/target/classes" />
+    <content url="file://$MODULE_DIR$/target/classes/web" />
+    <content url="file://$MODULE_DIR$/target/generated-sources" />
+  </component>
+  <component name="FacetManager">
+    <facet type="jpa" name="JPA">
+      <configuration>
+        <setting name="validation-enabled" value="true" />
+        <datasource-mapping />
+        <naming-strategy-map />
+      </configuration>
+    </facet>
+  </component>
+</module>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>USERS</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        a {
+            font-size: 14px;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+<h1>All Users</h1>
+<a href="/" th:href="@{/}">Home</a>
+<br/>
+<br/>
+<a href="/people/new">Add New User</a>
+<br/>
+<br/>
+<br/>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${people}">
+        <td th:text="${user.id}">1</td>
+        <td th:text="${user.name}">Name</td>
+        <td th:text="${user.surName}">Surname</td>
+        <td>
+            <a th:href="@{/people/edit(id=${user.id})}" >Edit</a>
+            <a th:href="@{/people/delete(id=${user.id})}" onclick="return confirm('Are you sure?')">Delete</a>
+
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
